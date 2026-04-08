@@ -10,12 +10,12 @@ int main(void) {
 		string s;
 		cout << "Enter any string, EOF to quit: ";
 
-		//ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½à¾¿ ï¿½Ô·Â¹Þ¾ï¿½ ï¿½ï¿½ï¿½ï¿½
+		//¹®ÀÚ¿­À» ÇÑ Çà¾¿ ÀÔ·Â¹Þ¾Æ ºÐÇÒ
 		while (getline(cin, s)) {
 			vector<string> v = split(s);
 			vector<string> fr = frame(v);
 
-			//ï¿½ï¿½ï¿½ï¿½ vï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ü¾î¸¦ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+			//º¤ÅÍ v¿¡ ÀúÀåÇÑ ´Ü¾î¸¦ °¢°¢ Ãâ·Â
 			for (vector<string>::size_type i = 0;
 				i != v.size(); i++) {
 				cout << fr[i] << endl;
