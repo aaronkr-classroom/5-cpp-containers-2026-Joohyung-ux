@@ -1,15 +1,15 @@
 
-#include "Students_info.h"
+#include "Student_Info.h"
 
 
-bool compare(const Student_info& a, const Student_info& b) {
-	return a.name < b.name; //True³Ä False ¹İÈ¯
+bool compare(const Student_Info& a, const Student_Info& b) {
+	return a.name < b.name; //Trueëƒ False ë°˜í™˜
 }
-//ÇÑ ÇĞ»ıÀÇ Á¤º¸ ÀĞ±â
-istream& read(istream& is, Student_info& s) {
-	//ÇĞ»ıÀÌ¸§, Áß°£°í»ç, ±â¸»°í»ç Á¡¼ö ÀĞ¾î ÀúÀå
+//í•œ í•™ìƒì˜ ì •ë³´ ì½ê¸°
+istream& read(istream& is, Student_Info& s) {
+	//í•™ìƒì´ë¦„, ì¤‘ê°„ê³ ì‚¬, ê¸°ë§ê³ ì‚¬ ì ìˆ˜ ì½ì–´ ì €ì¥
 	is >> s.name >> s.midterm >> s.final;
-	//°úÁ¦ Á¡¼ö¸¦ ÀĞÀ½
+	//ê³¼ì œ ì ìˆ˜ë¥¼ ì½ìŒ
 	read_hw(is, s.homework);
 	return is;
 }
@@ -17,18 +17,18 @@ istream& read_hw(istream& in, vector<double>& hw) {
 
 	if (in) {
 
-		//ÀÌÀü ³»¿ëÀ» Á¦°Å
+		//ì´ì „ ë‚´ìš©ì„ ì œê±°
 		hw.clear();
 
 
-		//°úÁ¦ Á¡¼ö¸¦ ÀĞÀ½
+		//ê³¼ì œ ì ìˆ˜ë¥¼ ì½ìŒ
 
 		double x;
 		while (in >> x) {
 			hw.push_back(x);
 		}
 
-		//´ÙÀ½ ÇĞ»ıÀÇ Á¡¼ö ÀÔ·Â ÀÛ¾÷À» °í·ÁÇØ ½ºÆ®¸²À» Áö¿ò
+		//ë‹¤ìŒ í•™ìƒì˜ ì ìˆ˜ ì…ë ¥ ì‘ì—…ì„ ê³ ë ¤í•´ ìŠ¤íŠ¸ë¦¼ì„ ì§€ì›€
 		in.clear();
 	}
 

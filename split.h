@@ -10,5 +10,6 @@ using std::vector;
 using std::string;
 
 vector<string> split(const string&);
+vector<string> lib_split(const string&);
 
 #endif
